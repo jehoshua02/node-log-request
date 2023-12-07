@@ -1,0 +1,12 @@
+version: "2"
+services:
+  node-log-request:
+    image: "jehoshua02/node-log-request:latest"
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    user: "node"
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
